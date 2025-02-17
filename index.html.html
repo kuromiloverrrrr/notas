@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<!-- saved from url=(0219)https://fenix.ciencias.ulisboa.pt/student#!com.qubit.solution.fenixedu.module.elearning.presentation.screens.student.StudentCoursesDashboard/%24timestamp%24=1739737513517/_qcheck=1d80a3574db2a0c32e3691dabd3865940a568354 -->
+<html dir="ltr" lang="pt_PT"><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/content/location/location.js" id="eppiocemhmnlbhjplcgkofciiegomcon"></script><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/extend-native-history-api.js"></script><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/requests.js"></script><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<!-- Basic Page Needs -->
+	
+	<meta http-equiv="Content-Language" content="pt">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="Description" content="FenixEdu™ is an open-source academic information platform.">
+	<meta name="Keywords" content="FenixEdu, open-source, academic, information, platform, academic administration, higher education, e-learning">
+	<meta name="Language" content="pt_PT">
+	<meta name="Robots" content="all">
+
+	    <!--
+    <meta name="Author" content="FenixEdu" />
+    <meta name="Email" content="hello@fenixedu.org" />
+    <meta name="Copyright" content="Técnico Lisboa - Instituto Superior Técnico" />
+    <meta name="Distribution" content="Global" />
+    <meta name="Rating" content="General" />
+    -->
+    
+    <!-- OpenGraph Specific Metas -->
+        <!--
+    <meta property="og:title" content="FenixEdu™" />
+    <meta property="og:type" content="application" />
+    <meta property="og:url" content="http://www.fenixedu.org" />
+    <meta property="og:site_name" content="FenixEdu" />
+    <meta property="og:description" content="FenixEdu Learning is an open-source academic information platform." />
+    <meta property="fb:profile_id" content="379238245509413" />
+    -->
+    
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.5">
+
+    <title>Disciplinas Frequentadas · Aluno</title>
+
+    <!-- Bootstrap core CSS -->
+	<link rel="stylesheet" type="text/css" media="screen" href="./bom_files/general.css">
+    <link href="./bom_files/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="./bom_files/jquery.min.js.transferir"></script>
+	<script src="./bom_files/bootstrap.min.js.transferir"></script>
+	<script> setLang = function(l) {
+        $.post('/api/bennu-core/profile/locale/' + l.replace('_', '-')).done(function() {
+            location.reload();
+                            var newURL = ""; 
+                var indexOfLocale = location.href.lastIndexOf("/locale=");
+                if(indexOfLocale > 0){
+                    newURL = location.href.substring(0,indexOfLocale) + '/locale=' + l.replace('_', '-');
+                }else{
+                    newURL = location.href + '/locale=' + l.replace('_', '-');
+                }                        
+                window.location.replace(newURL);
+                
+        });
+    }
+	</script>
+
+	<!-- Favicons & TouchIcons-->
+	<link rel="shortcut icon" type="image/x-icon" href="https://fenix.ciencias.ulisboa.pt/api/bennu-portal/configuration/favicon">
+
+  <script bis_use="true" type="text/javascript" charset="utf-8" data-bis-config="[&quot;facebook.com/&quot;,&quot;twitter.com/&quot;,&quot;youtube-nocookie.com/embed/&quot;,&quot;//vk.com/&quot;,&quot;//www.vk.com/&quot;,&quot;linkedin.com/&quot;,&quot;//www.linkedin.com/&quot;,&quot;//instagram.com/&quot;,&quot;//www.instagram.com/&quot;,&quot;//www.google.com/recaptcha/api2/&quot;,&quot;//hangouts.google.com/webchat/&quot;,&quot;//www.google.com/calendar/&quot;,&quot;//www.google.com/maps/embed&quot;,&quot;spotify.com/&quot;,&quot;soundcloud.com/&quot;,&quot;//player.vimeo.com/&quot;,&quot;//disqus.com/&quot;,&quot;//tgwidget.com/&quot;,&quot;//js.driftt.com/&quot;,&quot;friends2follow.com&quot;,&quot;/widget&quot;,&quot;login&quot;,&quot;//video.bigmir.net/&quot;,&quot;blogger.com&quot;,&quot;//smartlock.google.com/&quot;,&quot;//keep.google.com/&quot;,&quot;/web.tolstoycomments.com/&quot;,&quot;moz-extension://&quot;,&quot;chrome-extension://&quot;,&quot;/auth/&quot;,&quot;//analytics.google.com/&quot;,&quot;adclarity.com&quot;,&quot;paddle.com/checkout&quot;,&quot;hcaptcha.com&quot;,&quot;recaptcha.net&quot;,&quot;2captcha.com&quot;,&quot;accounts.google.com&quot;,&quot;www.google.com/shopping/customerreviews&quot;,&quot;buy.tinypass.com&quot;,&quot;gstatic.com&quot;,&quot;secureir.ebaystatic.com&quot;,&quot;docs.google.com&quot;,&quot;contacts.google.com&quot;,&quot;github.com&quot;,&quot;mail.google.com&quot;,&quot;chat.google.com&quot;,&quot;audio.xpleer.com&quot;,&quot;keepa.com&quot;,&quot;static.xx.fbcdn.net&quot;,&quot;sas.selleramp.com&quot;,&quot;1plus1.video&quot;,&quot;console.googletagservices.com&quot;,&quot;//lnkd.demdex.net/&quot;,&quot;//radar.cedexis.com/&quot;,&quot;//li.protechts.net/&quot;,&quot;challenges.cloudflare.com/&quot;,&quot;ogs.google.com&quot;]" src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executers/vi-tr.js"></script><link rel="stylesheet" type="text/css" href="./bom_files/styles.css"><script type="text/javascript" src="./bom_files/com.qubit.solution.vaadin.framework.widgets.UILayerWidgetset.nocache.js.transferir"></script><script src="./bom_files/0ABDC88EB81653E7A361C3315D42F7B9.cache.js.transferir"></script></head>
+
+  <body __processed_831d9b9d-e07e-48ab-8d7a-85b037aa7647__="true" bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJlbmFibGVkIiwiRkFDRUJPT0siOiJlbmFibGVkIiwiVFdJVFRFUiI6ImVuYWJsZWQiLCJSRURESVQiOiJlbmFibGVkIiwiUElOVEVSRVNUIjoiZW5hYmxlZCIsIklOU1RBR1JBTSI6ImVuYWJsZWQiLCJMSU5LRURJTiI6ImRpc2FibGVkIiwiQ09ORklHIjoiZGlzYWJsZWQifSwidmVyc2lvbiI6IjIuMC4yMCIsInNjb3JlIjoyMDAyMDB9XQ==" class="v-sa v-ch v-webkit v-win">
+  		<!-- Bar -->
+	<div class="navbar navbar-inverse hidden-xs fenixedu-bar" bis_skin_checked="1">
+		<div class="container-fluid" bis_skin_checked="1">
+			<div class="navbar-header" bis_skin_checked="1">
+				<a class="navbar-brand" href="https://fenix.ciencias.ulisboa.pt/" target="_blank">FenixEdu</a>
+			</div>
+			<div class="collapse navbar-collapse" bis_skin_checked="1">
+				<ul class="nav navbar-nav">
+									</ul>
+				<ul class="nav navbar-nav navbar-right">
+				<li></li>
+											<li><a>Daniela Alexandra Costa Monteiro</a></li>
+												<li class="active"><a href="https://fenix.ciencias.ulisboa.pt/logout">Logout</a></li>
+									</ul>
+			</div>
+		</div>
+	</div>
+	
+	<header class="clearfix" role="banner">
+		<div class="col-sm-2 logo-container text-center" style="padding-bottom: 5px;" bis_skin_checked="1">
+			<button type="button" class="navbar-toggle hamburger" data-toggle="collapse" data-target="#topNav">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+							<img class="organizationLogo" src="./bom_files/logo" title="">
+					</div>
+		<nav class="col-sm-10 collapse" id="topNav" role="navigation">
+			<ul class="nav navbar-bottom nav-pills nav-menu">
+										<li class="active"><a href="https://fenix.ciencias.ulisboa.pt/student">Aluno</a></li>
+							<li class=""><a href="https://fenix.ciencias.ulisboa.pt/candidate">Candidato</a></li>
+							<li class=""><a href="https://fenix.ciencias.ulisboa.pt/personal">Pessoal</a></li>
+							<li class=""><a href="https://fenix.ciencias.ulisboa.pt/support">Suporte</a></li>
+										<li class="visible-xs"><a href="https://fenix.ciencias.ulisboa.pt/logout"><strong>Logout</strong></a></li>
+			</ul>
+		</nav>
+	</header>
+	<div bis_skin_checked="1">
+				<main class="col-sm-10 col-sm-push-2" role="main">
+						<ol class="breadcrumb">
+							<li><a href="https://fenix.ciencias.ulisboa.pt/student">Aluno</a></li>
+							<li><a href="https://fenix.ciencias.ulisboa.pt/student/consult">Consultar</a></li>
+							<li><a href="https://fenix.ciencias.ulisboa.pt/student/consult/com.qubit.solution.fenixedu.module.elearning.presentation.screens.student.StudentCoursesDashboard">Disciplinas Frequentadas</a></li>
+			
+				<span class="pull-right">
+											<a class="locale-changer active" title="português (Portugal)" onclick="setLang(&#39;pt_PT&#39;)">pt</a>
+											<a class="locale-changer " title="inglês (Reino Unido)" onclick="setLang(&#39;en_GB&#39;)">en</a>
+									</span>
+			</ol>
+						<div id="main-content-wrapper" bis_skin_checked="1">
+                                    
+<link rel="stylesheet" href="./bom_files/font-awesome.css">
+
+	<!-- Loads the Vaadin widget set, etc. -->
+	<script type="text/javascript" src="./bom_files/vaadinBootstrap.js.transferir"></script>
+
+	<!-- GWT requires an invisible history frame. It is   -->
+	<!-- needed for page/fragment history in the browser. -->
+	<iframe tabindex="-1" id="__gwt_historyFrame" style="position: absolute; width: 0; height: 0;
+                 border: 0; overflow: hidden" src="javascript:false" src="./bom_files/saved_resource.html"></iframe>
+
+	<!-- So here comes the div element in which the Vaadin -->
+	<!-- application is embedded.                          -->
+
+    <div id="uiLayer" class="v-app  quik-vaadin" style="height: inherit;" bis_skin_checked="1"><div tabindex="1" class="v-ui v-ui-embedded v-scrollable" style="width: 100%; height: 100%;" bis_skin_checked="1"><div class="v-loading-indicator first" style="position: absolute; display: none;" bis_skin_checked="1"></div><div class="v-panel v-widget light v-panel-light v-has-width" id="vaadin-screen" style="overflow: hidden; width: 100%; padding-top: 0px; padding-bottom: 0px;" bis_skin_checked="1"><div class="v-panel-captionwrap" style="margin-top: 0px;" bis_skin_checked="1"><div class="v-panel-nocaption v-panel-nocaption-light" bis_skin_checked="1"><span></span></div></div><div class="v-panel-content v-panel-content-light v-scrollable" tabindex="-1" style="position: relative;" bis_skin_checked="1"><div class="v-verticallayout v-layout v-vertical v-widget v-has-width" style="width: 100%;" bis_skin_checked="1"><div class="v-slot v-slot-h1 v-slot-main-header" bis_skin_checked="1"><div class="v-label v-widget h1 v-label-h1 main-header v-label-main-header v-label-undef-w" id="id-b3123ce596834e1fa5b85f5b6a1464dd" bis_skin_checked="1">Disciplinas Frequentadas</div></div><div class="v-slot v-slot-forwardURL-hidden-link" bis_skin_checked="1"><div class="v-link v-widget forwardURL-hidden-link v-link-forwardURL-hidden-link" id="forwardURL-hidden-link-StudentCoursesDashboard--1724835054" bis_skin_checked="1"><a><span></span></a></div></div><div class="v-slot v-slot-hidden-download-button" bis_skin_checked="1"><div tabindex="0" role="button" class="v-button v-widget hidden-download-button v-button-hidden-download-button" id="download-hidden-button-StudentCoursesDashboard-365179787" bis_skin_checked="1"><span class="v-button-wrap"><span class="v-button-caption"></span></span></div></div><div class="v-slot" bis_skin_checked="1"><div tabindex="0" class="v-menubar v-widget" role="menubar" bis_skin_checked="1"><span tabindex="-1" class="v-menubar-menuitem uiLayer-menubar-menuitem-selected v-menubar-menuitem-uiLayer-menubar-menuitem-selected" role="menuitem"><span class="v-menubar-menuitem-caption">Matrículas Activas</span></span><span tabindex="-1" class="v-menubar-menuitem" role="menuitem"><span class="v-menubar-menuitem-caption">Matrículas Inactivas</span></span></div></div><div class="v-slot" bis_skin_checked="1"><div class="v-label v-widget v-has-height v-label-undef-w" style="height: 1.5em;" bis_skin_checked="1">&nbsp;</div></div><div class="v-slot" bis_skin_checked="1"><div class="v-verticallayout v-layout v-vertical v-widget v-has-width" style="width: 100%;" bis_skin_checked="1"><div class="v-slot" bis_skin_checked="1"><div class="v-horizontallayout v-layout v-horizontal v-widget v-has-width" style="width: 100%;" bis_skin_checked="1"><div class="v-expand" style="padding-left: 11px;" bis_skin_checked="1"><div class="v-slot v-slot-h2" style="width: 50%; margin-left: -11px;" bis_skin_checked="1"><div class="v-label v-widget h2 v-label-h2 v-label-undef-w" bis_skin_checked="1">Curso: 9011 - Licenciatura Bolonha em Biologia (nº 54253)</div></div><div class="v-spacing" bis_skin_checked="1"></div><div class="v-slot v-slot-width-medium v-align-right v-align-bottom" style="width: 50%;" bis_skin_checked="1"><div class="v-widget v-has-caption v-caption-on-right" bis_skin_checked="1"><div role="combobox" class="v-filterselect v-widget width-medium v-filterselect-width-medium v-required v-filterselect-required" bis_skin_checked="1"><input type="text" class="v-filterselect-input" autocomplete="off" aria-required="true" id="gwt-uid-3" aria-labelledby="gwt-uid-2" tabindex="0" dir="" style="width: 200px;"><div class="v-filterselect-button" aria-hidden="true" role="button" bis_skin_checked="1"></div></div><div class="v-caption v-caption-width-medium" id="gwt-uid-2" for="gwt-uid-3" bis_skin_checked="1"><span class="v-required-field-indicator" aria-hidden="true">*</span></div></div></div></div></div></div><div class="v-spacing" bis_skin_checked="1"></div><div class="v-slot" bis_skin_checked="1"><div class="v-verticallayout v-layout v-vertical v-widget v-has-width" style="width: 100%;" bis_skin_checked="1"><div class="v-slot v-slot-background-color-grey-lightest" bis_skin_checked="1"><div class="v-gridlayout v-layout v-widget background-color-grey-lightest v-gridlayout-background-color-grey-lightest v-has-width v-gridlayout-margin-top v-gridlayout-margin-right v-gridlayout-margin-bottom v-gridlayout-margin-left" style="width: 100%; height: 154px;" bis_skin_checked="1"><div class="v-gridlayout-spacing-on" style="position: absolute;" bis_skin_checked="1"></div><div class="v-gridlayout-slot" style="width: 363px; height: 22px; top: 32px; left: 32px;" bis_skin_checked="1"><div class="v-label v-widget text-align-center v-label-text-align-center text-style-bold v-label-text-style-bold v-readonly v-has-width" style="width: 100%;" bis_skin_checked="1">Inscrições no Período: 6</div></div><div class="v-gridlayout-slot" style="width: 57px; height: 22px; top: 32px; left: 406px;" bis_skin_checked="1"><div class="v-label v-widget v-readonly v-has-width" style="width: 100%;" bis_skin_checked="1"></div></div><div class="v-gridlayout-slot" style="width: 363px; height: 22px; top: 32px; left: 474px;" bis_skin_checked="1"><div class="v-label v-widget text-align-center v-label-text-align-center text-style-bold v-label-text-style-bold v-readonly v-has-width" style="width: 100%;" bis_skin_checked="1">Créditos das Inscrições no Período: 30,0</div></div><div class="v-gridlayout-slot" style="width: 57px; height: 22px; top: 32px; left: 848px;" bis_skin_checked="1"><div class="v-label v-widget v-readonly v-has-width" style="width: 100%;" bis_skin_checked="1"></div></div><div class="v-gridlayout-slot" style="width: 354px; height: 22px; top: 32px; left: 916px;" bis_skin_checked="1"><div class="v-label v-widget text-align-center v-label-text-align-center text-style-bold v-label-text-style-bold v-readonly v-has-width" style="width: 100%;" bis_skin_checked="1">Total de Créditos da Matrícula (0,0)</div></div><div class="v-gridlayout-slot" style="width: 55px; height: 22px; top: 32px; left: 1281px;" bis_skin_checked="1"><div class="v-label v-widget v-readonly v-has-width" style="width: 100%;" bis_skin_checked="1"></div></div><div class="v-gridlayout-slot" style="width: 352px; height: 22px; top: 32px; margin-right: 32px; left: 1347px;" bis_skin_checked="1"><div class="v-label v-widget text-align-center v-label-text-align-center text-style-bold v-label-text-style-bold v-readonly v-has-width" style="width: 100%;" bis_skin_checked="1">Média Total da Matrícula</div></div><div class="v-gridlayout-slot" style="width: 363px; height: 22px; top: 65px; left: 32px;" bis_skin_checked="1"><div class="v-label v-widget text-align-center v-label-text-align-center v-readonly v-has-width" style="width: 100%;" bis_skin_checked="1">6 aprovadas / 0 inscritas / 0 reprovadas</div></div><div class="v-gridlayout-slot" style="width: 57px; height: 22px; top: 65px; left: 406px;" bis_skin_checked="1"><div class="v-label v-widget v-readonly v-has-width" style="width: 100%;" bis_skin_checked="1"></div></div><div class="v-gridlayout-slot" style="width: 363px; height: 22px; top: 65px; left: 474px;" bis_skin_checked="1"><div class="v-label v-widget text-align-center v-label-text-align-center v-readonly v-has-width" style="width: 100%;" bis_skin_checked="1">30,0 aprovados / 0,0 inscritos / 0,0 reprovados</div></div><div class="v-gridlayout-slot" style="width: 57px; height: 22px; top: 65px; left: 848px;" bis_skin_checked="1"><div class="v-label v-widget v-readonly v-has-width" style="width: 100%;" bis_skin_checked="1"></div></div><div class="v-gridlayout-slot" style="width: 354px; height: 22px; top: 65px; left: 916px;" bis_skin_checked="1"><div class="v-label v-widget text-align-center v-label-text-align-center v-readonly v-has-width" style="width: 100%;" bis_skin_checked="1">99,0 aprovados / 0,0 remanescentes</div></div><div class="v-gridlayout-slot" style="width: 55px; height: 22px; top: 65px; left: 1281px;" bis_skin_checked="1"><div class="v-label v-widget v-readonly v-has-width" style="width: 100%;" bis_skin_checked="1"></div></div><div class="v-gridlayout-slot" style="width: 352px; height: 22px; top: 65px; margin-right: 32px; left: 1347px;" bis_skin_checked="1"><div class="v-label v-widget text-align-center v-label-text-align-center v-readonly v-has-width" style="width: 100%;" bis_skin_checked="1">13,81</div></div><div class="v-gridlayout-slot" style="width: 363px; margin-bottom: 32px; height: 24px; top: 98px; left: 32px;" bis_skin_checked="1"><div class="v-gridlayout v-layout v-widget v-has-width" style="width: 100%; height: 24px;" bis_skin_checked="1"><div class="v-gridlayout-spacing-off" style="position: absolute;" bis_skin_checked="1"></div><div class="v-gridlayout-slot" style="width: 362px; height: 24px; top: 0px; left: 0px;" bis_skin_checked="1"><div class="v-label v-widget background-color-green v-label-background-color-green border-style-solid v-label-border-style-solid border-width-xxsmall v-label-border-width-xxsmall border-color-grey v-label-border-color-grey v-readonly v-has-width" style="width: 100%;" bis_skin_checked="1">⁣</div></div></div></div><div class="v-gridlayout-slot" style="width: 57px; margin-bottom: 32px; height: 24px; top: 98px; left: 406px;" bis_skin_checked="1"><div class="v-label v-widget v-readonly v-has-width" style="width: 100%;" bis_skin_checked="1"></div></div><div class="v-gridlayout-slot" style="width: 363px; margin-bottom: 32px; height: 24px; top: 98px; left: 474px;" bis_skin_checked="1"><div class="v-gridlayout v-layout v-widget v-has-width" style="width: 100%; height: 24px;" bis_skin_checked="1"><div class="v-gridlayout-spacing-off" style="position: absolute;" bis_skin_checked="1"></div><div class="v-gridlayout-slot" style="width: 362px; height: 24px; top: 0px; left: 0px;" bis_skin_checked="1"><div class="v-label v-widget background-color-green v-label-background-color-green border-style-solid v-label-border-style-solid border-width-xxsmall v-label-border-width-xxsmall border-color-grey v-label-border-color-grey v-readonly v-has-width" style="width: 100%;" bis_skin_checked="1">⁣</div></div></div></div><div class="v-gridlayout-slot" style="width: 57px; margin-bottom: 32px; height: 24px; top: 98px; left: 848px;" bis_skin_checked="1"><div class="v-label v-widget v-readonly v-has-width" style="width: 100%;" bis_skin_checked="1"></div></div><div class="v-gridlayout-slot" style="width: 354px; margin-bottom: 32px; height: 24px; top: 98px; left: 916px;" bis_skin_checked="1"><div class="v-gridlayout v-layout v-widget v-has-width" style="width: 100%; height: 24px;" bis_skin_checked="1"><div class="v-gridlayout-spacing-off" style="position: absolute;" bis_skin_checked="1"></div><div class="v-gridlayout-slot" style="width: 353px; height: 24px; top: 0px; left: 0px;" bis_skin_checked="1"><div class="v-label v-widget background-color-green v-label-background-color-green border-style-solid v-label-border-style-solid border-width-xxsmall v-label-border-width-xxsmall border-color-grey v-label-border-color-grey v-readonly v-has-width" style="width: 100%;" bis_skin_checked="1">⁣</div></div></div></div><div class="v-gridlayout-slot" style="width: 55px; margin-bottom: 32px; height: 24px; top: 98px; left: 1281px;" bis_skin_checked="1"><div class="v-label v-widget v-readonly v-has-width" style="width: 100%;" bis_skin_checked="1"></div></div><div class="v-gridlayout-slot" style="width: 352px; margin-bottom: 32px; height: 24px; top: 98px; margin-right: 32px; left: 1347px;" bis_skin_checked="1"><div class="v-gridlayout v-layout v-widget v-has-width" style="width: 100%; height: 24px;" bis_skin_checked="1"><div class="v-gridlayout-spacing-off" style="position: absolute;" bis_skin_checked="1"></div><div class="v-gridlayout-slot" style="width: 224px; height: 24px; top: 0px; left: 0px;" bis_skin_checked="1"><div class="v-label v-widget background-color-green v-label-background-color-green border-style-solid v-label-border-style-solid border-width-xxsmall v-label-border-width-xxsmall border-color-grey v-label-border-color-grey v-readonly v-has-width" style="width: 100%;" bis_skin_checked="1">⁣</div></div><div class="v-gridlayout-slot" style="width: 127px; height: 24px; top: 0px; left: 224px;" bis_skin_checked="1"><div class="v-label v-widget background-color-red v-label-background-color-red border-style-solid v-label-border-style-solid border-width-xxsmall v-label-border-width-xxsmall border-color-grey v-label-border-color-grey v-readonly v-has-width" style="width: 100%;" bis_skin_checked="1">⁣</div></div></div></div></div></div><div class="v-spacing" bis_skin_checked="1"></div><div class="v-slot" bis_skin_checked="1"><div class="v-label v-widget v-has-height v-label-undef-w" style="height: 3em;" bis_skin_checked="1">&nbsp;</div></div><div class="v-spacing" bis_skin_checked="1"></div><div class="v-slot v-slot-background-color-green" bis_skin_checked="1"><div class="v-gridlayout v-layout v-widget background-color-green v-gridlayout-background-color-green v-has-width" style="width: 100%; height: 55px;" bis_skin_checked="1"><div class="v-gridlayout-spacing-on" style="position: absolute;" bis_skin_checked="1"></div><div class="v-gridlayout-slot" style="width: 987px; height: 55px; top: 0px; left: 0px;" bis_skin_checked="1"><div class="v-label v-widget text-size-medium v-label-text-size-medium v-readonly v-has-width" style="position: absolute; width: 100%; top: 16.5px;" bis_skin_checked="1">22738 - Bioestatística</div></div><div class="v-gridlayout-slot" style="width: 237px; height: 55px; top: 0px; left: 998px;" bis_skin_checked="1"><div class="v-label v-widget v-readonly v-has-width" style="position: absolute; width: 100%; top: 16.5px;" bis_skin_checked="1">Créditos: 6.0</div></div><div class="v-gridlayout-slot" style="width: 237px; height: 55px; top: 0px; left: 1246px;" bis_skin_checked="1"><div class="v-label v-widget v-readonly v-has-width" style="position: absolute; width: 100%; top: 16.5px;" bis_skin_checked="1">Estado: Aprovado</div></div><div class="v-gridlayout-slot" style="width: 237px; height: 55px; top: 0px; left: 1494px;" bis_skin_checked="1"><div class="v-label v-widget text-style-bold v-label-text-style-bold v-readonly v-has-width" style="position: absolute; width: 100%; top: 16.5px;" bis_skin_checked="1">Nota: 13</div></div></div></div><div class="v-spacing" bis_skin_checked="1"></div><div class="v-slot" bis_skin_checked="1"><div tabindex="0" class="v-menubar v-widget" role="menubar" bis_skin_checked="1"><span tabindex="-1" class="v-menubar-menuitem" role="menuitem"><span class="v-menubar-menuitem-caption"><span class="v-icon FontAwesome"></span>Conteúdos</span></span><span tabindex="-1" class="v-menubar-menuitem" role="menuitem"><span class="v-menubar-menuitem-caption"><span class="v-icon FontAwesome"></span>Comunicação</span></span><span tabindex="-1" class="v-menubar-menuitem" role="menuitem"><span class="v-menubar-menuitem-caption"><span class="v-icon FontAwesome"></span>Ficha de Unidade Curricular</span></span><span tabindex="-1" class="v-menubar-menuitem" role="menuitem"><span class="v-menubar-menuitem-caption"><span class="v-icon FontAwesome"></span>Corpo Docente</span></span><span tabindex="-1" class="v-menubar-menuitem" role="menuitem"><span class="v-menubar-menuitem-caption"><span class="v-icon FontAwesome"></span>Calendário de Aulas</span></span></div></div><div class="v-spacing" bis_skin_checked="1"></div><div class="v-slot" bis_skin_checked="1"><div class="v-label v-widget v-has-height v-label-undef-w" style="height: 1.5em;" bis_skin_checked="1">&nbsp;</div></div><div class="v-spacing" bis_skin_checked="1"></div><div class="v-slot v-slot-background-color-green" bis_skin_checked="1"><div class="v-gridlayout v-layout v-widget background-color-green v-gridlayout-background-color-green v-has-width" style="width: 100%; height: 55px;" bis_skin_checked="1"><div class="v-gridlayout-spacing-on" style="position: absolute;" bis_skin_checked="1"></div><div class="v-gridlayout-slot" style="width: 987px; height: 55px; top: 0px; left: 0px;" bis_skin_checked="1"><div class="v-label v-widget text-size-medium v-label-text-size-medium v-readonly v-has-width" style="position: absolute; width: 100%; top: 16.5px;" bis_skin_checked="1">66505 - Biologia Animal I</div></div><div class="v-gridlayout-slot" style="width: 237px; height: 55px; top: 0px; left: 998px;" bis_skin_checked="1"><div class="v-label v-widget v-readonly v-has-width" style="position: absolute; width: 100%; top: 16.5px;" bis_skin_checked="1">Créditos: 6.0</div></div><div class="v-gridlayout-slot" style="width: 237px; height: 55px; top: 0px; left: 1246px;" bis_skin_checked="1"><div class="v-label v-widget v-readonly v-has-width" style="position: absolute; width: 100%; top: 16.5px;" bis_skin_checked="1">Estado: Aprovado</div></div><div class="v-gridlayout-slot" style="width: 237px; height: 55px; top: 0px; left: 1494px;" bis_skin_checked="1"><div class="v-label v-widget text-style-bold v-label-text-style-bold v-readonly v-has-width" style="position: absolute; width: 100%; top: 16.5px;" bis_skin_checked="1">Nota: 14</div></div></div></div><div class="v-spacing" bis_skin_checked="1"></div><div class="v-slot" bis_skin_checked="1"><div tabindex="0" class="v-menubar v-widget" role="menubar" bis_skin_checked="1"><span tabindex="-1" class="v-menubar-menuitem" role="menuitem"><span class="v-menubar-menuitem-caption"><span class="v-icon FontAwesome"></span>Conteúdos</span></span><span tabindex="-1" class="v-menubar-menuitem" role="menuitem"><span class="v-menubar-menuitem-caption"><span class="v-icon FontAwesome"></span>Comunicação</span></span><span tabindex="-1" class="v-menubar-menuitem" role="menuitem"><span class="v-menubar-menuitem-caption"><span class="v-icon FontAwesome"></span>Ficha de Unidade Curricular</span></span><span tabindex="-1" class="v-menubar-menuitem" role="menuitem"><span class="v-menubar-menuitem-caption"><span class="v-icon FontAwesome"></span>Corpo Docente</span></span><span tabindex="-1" class="v-menubar-menuitem" role="menuitem"><span class="v-menubar-menuitem-caption"><span class="v-icon FontAwesome"></span>Calendário de Aulas</span></span></div></div><div class="v-spacing" bis_skin_checked="1"></div><div class="v-slot" bis_skin_checked="1"><div class="v-label v-widget v-has-height v-label-undef-w" style="height: 1.5em;" bis_skin_checked="1">&nbsp;</div></div><div class="v-spacing" bis_skin_checked="1"></div><div class="v-slot v-slot-background-color-green" bis_skin_checked="1"><div class="v-gridlayout v-layout v-widget background-color-green v-gridlayout-background-color-green v-has-width" style="width: 100%; height: 55px;" bis_skin_checked="1"><div class="v-gridlayout-spacing-on" style="position: absolute;" bis_skin_checked="1"></div><div class="v-gridlayout-slot" style="width: 987px; height: 55px; top: 0px; left: 0px;" bis_skin_checked="1"><div class="v-label v-widget text-size-medium v-label-text-size-medium v-readonly v-has-width" style="position: absolute; width: 100%; top: 16.5px;" bis_skin_checked="1">62806 - Biologia Celular Complementar</div></div><div class="v-gridlayout-slot" style="width: 237px; height: 55px; top: 0px; left: 998px;" bis_skin_checked="1"><div class="v-label v-widget v-readonly v-has-width" style="position: absolute; width: 100%; top: 16.5px;" bis_skin_checked="1">Créditos: 6.0</div></div><div class="v-gridlayout-slot" style="width: 237px; height: 55px; top: 0px; left: 1246px;" bis_skin_checked="1"><div class="v-label v-widget v-readonly v-has-width" style="position: absolute; width: 100%; top: 16.5px;" bis_skin_checked="1">Estado: Aprovado</div></div><div class="v-gridlayout-slot" style="width: 237px; height: 55px; top: 0px; left: 1494px;" bis_skin_checked="1"><div class="v-label v-widget text-style-bold v-label-text-style-bold v-readonly v-has-width" style="position: absolute; width: 100%; top: 16.5px;" bis_skin_checked="1">Nota: 15</div></div></div></div><div class="v-spacing" bis_skin_checked="1"></div><div class="v-slot" bis_skin_checked="1"><div tabindex="0" class="v-menubar v-widget" role="menubar" bis_skin_checked="1"><span tabindex="-1" class="v-menubar-menuitem" role="menuitem"><span class="v-menubar-menuitem-caption"><span class="v-icon FontAwesome"></span>Conteúdos</span></span><span tabindex="-1" class="v-menubar-menuitem" role="menuitem"><span class="v-menubar-menuitem-caption"><span class="v-icon FontAwesome"></span>Comunicação</span></span><span tabindex="-1" class="v-menubar-menuitem" role="menuitem"><span class="v-menubar-menuitem-caption"><span class="v-icon FontAwesome"></span>Ficha de Unidade Curricular</span></span><span tabindex="-1" class="v-menubar-menuitem" role="menuitem"><span class="v-menubar-menuitem-caption"><span class="v-icon FontAwesome"></span>Corpo Docente</span></span><span tabindex="-1" class="v-menubar-menuitem" role="menuitem"><span class="v-menubar-menuitem-caption"><span class="v-icon FontAwesome"></span>Calendário de Aulas</span></span></div></div><div class="v-spacing" bis_skin_checked="1"></div><div class="v-slot" bis_skin_checked="1"><div class="v-label v-widget v-has-height v-label-undef-w" style="height: 1.5em;" bis_skin_checked="1">&nbsp;</div></div><div class="v-spacing" bis_skin_checked="1"></div><div class="v-slot v-slot-background-color-green" bis_skin_checked="1"><div class="v-gridlayout v-layout v-widget background-color-green v-gridlayout-background-color-green v-has-width" style="width: 100%; height: 55px;" bis_skin_checked="1"><div class="v-gridlayout-spacing-on" style="position: absolute;" bis_skin_checked="1"></div><div class="v-gridlayout-slot" style="width: 987px; height: 55px; top: 0px; left: 0px;" bis_skin_checked="1"><div class="v-label v-widget text-size-medium v-label-text-size-medium v-readonly v-has-width" style="position: absolute; width: 100%; top: 16.5px;" bis_skin_checked="1">66549 - Embriologia e Histologia</div></div><div class="v-gridlayout-slot" style="width: 237px; height: 55px; top: 0px; left: 998px;" bis_skin_checked="1"><div class="v-label v-widget v-readonly v-has-width" style="position: absolute; width: 100%; top: 16.5px;" bis_skin_checked="1">Créditos: 3.0</div></div><div class="v-gridlayout-slot" style="width: 237px; height: 55px; top: 0px; left: 1246px;" bis_skin_checked="1"><div class="v-label v-widget v-readonly v-has-width" style="position: absolute; width: 100%; top: 16.5px;" bis_skin_checked="1">Estado: Aprovado</div></div><div class="v-gridlayout-slot" style="width: 237px; height: 55px; top: 0px; left: 1494px;" bis_skin_checked="1"><div class="v-label v-widget text-style-bold v-label-text-style-bold v-readonly v-has-width" style="position: absolute; width: 100%; top: 16.5px;" bis_skin_checked="1">Nota: 11</div></div></div></div><div class="v-spacing" bis_skin_checked="1"></div><div class="v-slot" bis_skin_checked="1"><div tabindex="0" class="v-menubar v-widget" role="menubar" bis_skin_checked="1"><span tabindex="-1" class="v-menubar-menuitem" role="menuitem"><span class="v-menubar-menuitem-caption"><span class="v-icon FontAwesome"></span>Conteúdos</span></span><span tabindex="-1" class="v-menubar-menuitem" role="menuitem"><span class="v-menubar-menuitem-caption"><span class="v-icon FontAwesome"></span>Comunicação</span></span><span tabindex="-1" class="v-menubar-menuitem" role="menuitem"><span class="v-menubar-menuitem-caption"><span class="v-icon FontAwesome"></span>Ficha de Unidade Curricular</span></span><span tabindex="-1" class="v-menubar-menuitem" role="menuitem"><span class="v-menubar-menuitem-caption"><span class="v-icon FontAwesome"></span>Corpo Docente</span></span><span tabindex="-1" class="v-menubar-menuitem" role="menuitem"><span class="v-menubar-menuitem-caption"><span class="v-icon FontAwesome"></span>Calendário de Aulas</span></span></div></div><div class="v-spacing" bis_skin_checked="1"></div><div class="v-slot" bis_skin_checked="1"><div class="v-label v-widget v-has-height v-label-undef-w" style="height: 1.5em;" bis_skin_checked="1">&nbsp;</div></div><div class="v-spacing" bis_skin_checked="1"></div><div class="v-slot v-slot-background-color-green" bis_skin_checked="1"><div class="v-gridlayout v-layout v-widget background-color-green v-gridlayout-background-color-green v-has-width" style="width: 100%; height: 55px;" bis_skin_checked="1"><div class="v-gridlayout-spacing-on" style="position: absolute;" bis_skin_checked="1"></div><div class="v-gridlayout-slot" style="width: 987px; height: 55px; top: 0px; left: 0px;" bis_skin_checked="1"><div class="v-label v-widget text-size-medium v-label-text-size-medium v-readonly v-has-width" style="position: absolute; width: 100%; top: 16.5px;" bis_skin_checked="1">62836 - Fundamentos de Biologia Molecular</div></div><div class="v-gridlayout-slot" style="width: 237px; height: 55px; top: 0px; left: 998px;" bis_skin_checked="1"><div class="v-label v-widget v-readonly v-has-width" style="position: absolute; width: 100%; top: 16.5px;" bis_skin_checked="1">Créditos: 6.0</div></div><div class="v-gridlayout-slot" style="width: 237px; height: 55px; top: 0px; left: 1246px;" bis_skin_checked="1"><div class="v-label v-widget v-readonly v-has-width" style="position: absolute; width: 100%; top: 16.5px;" bis_skin_checked="1">Estado: Aprovado</div></div><div class="v-gridlayout-slot" style="width: 237px; height: 55px; top: 0px; left: 1494px;" bis_skin_checked="1"><div class="v-label v-widget text-style-bold v-label-text-style-bold v-readonly v-has-width" style="position: absolute; width: 100%; top: 16.5px;" bis_skin_checked="1">Nota: 13</div></div></div></div><div class="v-spacing" bis_skin_checked="1"></div><div class="v-slot" bis_skin_checked="1"><div tabindex="0" class="v-menubar v-widget" role="menubar" bis_skin_checked="1"><span tabindex="-1" class="v-menubar-menuitem" role="menuitem"><span class="v-menubar-menuitem-caption"><span class="v-icon FontAwesome"></span>Conteúdos</span></span><span tabindex="-1" class="v-menubar-menuitem" role="menuitem"><span class="v-menubar-menuitem-caption"><span class="v-icon FontAwesome"></span>Comunicação</span></span><span tabindex="-1" class="v-menubar-menuitem" role="menuitem"><span class="v-menubar-menuitem-caption"><span class="v-icon FontAwesome"></span>Ficha de Unidade Curricular</span></span><span tabindex="-1" class="v-menubar-menuitem" role="menuitem"><span class="v-menubar-menuitem-caption"><span class="v-icon FontAwesome"></span>Corpo Docente</span></span><span tabindex="-1" class="v-menubar-menuitem" role="menuitem"><span class="v-menubar-menuitem-caption"><span class="v-icon FontAwesome"></span>Calendário de Aulas</span></span></div></div><div class="v-spacing" bis_skin_checked="1"></div><div class="v-slot" bis_skin_checked="1"><div class="v-label v-widget v-has-height v-label-undef-w" style="height: 1.5em;" bis_skin_checked="1">&nbsp;</div></div><div class="v-spacing" bis_skin_checked="1"></div><div class="v-slot v-slot-background-color-green" bis_skin_checked="1"><div class="v-gridlayout v-layout v-widget background-color-green v-gridlayout-background-color-green v-has-width" style="width: 100%; height: 55px;" bis_skin_checked="1"><div class="v-gridlayout-spacing-on" style="position: absolute;" bis_skin_checked="1"></div><div class="v-gridlayout-slot" style="width: 987px; height: 55px; top: 0px; left: 0px;" bis_skin_checked="1"><div class="v-label v-widget text-size-medium v-label-text-size-medium v-readonly v-has-width" style="position: absolute; width: 100%; top: 16.5px;" bis_skin_checked="1">62820 - Fisiologia Vegetal</div></div><div class="v-gridlayout-slot" style="width: 237px; height: 55px; top: 0px; left: 998px;" bis_skin_checked="1"><div class="v-label v-widget v-readonly v-has-width" style="position: absolute; width: 100%; top: 16.5px;" bis_skin_checked="1">Créditos: 6.0</div></div><div class="v-gridlayout-slot" style="width: 237px; height: 55px; top: 0px; left: 1246px;" bis_skin_checked="1"><div class="v-label v-widget v-readonly v-has-width" style="position: absolute; width: 100%; top: 16.5px;" bis_skin_checked="1">Estado: Aprovado</div></div><div class="v-gridlayout-slot" style="width: 237px; height: 55px; top: 0px; left: 1494px;" bis_skin_checked="1"><div class="v-label v-widget text-style-bold v-label-text-style-bold v-readonly v-has-width" style="position: absolute; width: 100%; top: 16.5px;" bis_skin_checked="1">Nota: 12</div></div></div></div><div class="v-spacing" bis_skin_checked="1"></div><div class="v-slot" bis_skin_checked="1"><div tabindex="0" class="v-menubar v-widget" role="menubar" bis_skin_checked="1"><span tabindex="-1" class="v-menubar-menuitem" role="menuitem"><span class="v-menubar-menuitem-caption"><span class="v-icon FontAwesome"></span>Conteúdos</span></span><span tabindex="-1" class="v-menubar-menuitem" role="menuitem"><span class="v-menubar-menuitem-caption"><span class="v-icon FontAwesome"></span>Comunicação</span></span><span tabindex="-1" class="v-menubar-menuitem" role="menuitem"><span class="v-menubar-menuitem-caption"><span class="v-icon FontAwesome"></span>Ficha de Unidade Curricular</span></span><span tabindex="-1" class="v-menubar-menuitem" role="menuitem"><span class="v-menubar-menuitem-caption"><span class="v-icon FontAwesome"></span>Corpo Docente</span></span><span tabindex="-1" class="v-menubar-menuitem" role="menuitem"><span class="v-menubar-menuitem-caption"><span class="v-icon FontAwesome"></span>Calendário de Aulas</span></span></div></div><div class="v-spacing" bis_skin_checked="1"></div><div class="v-slot" bis_skin_checked="1"><div class="v-label v-widget v-has-height v-label-undef-w" style="height: 1.5em;" bis_skin_checked="1">&nbsp;</div></div></div></div></div></div><div class="v-slot" bis_skin_checked="1"><div class="v-label v-widget v-has-height v-label-undef-w" style="height: 1.5em;" bis_skin_checked="1">&nbsp;</div></div><div class="v-slot" bis_skin_checked="1"><div class="v-verticallayout v-layout v-vertical v-widget" bis_skin_checked="1"></div></div><div class="v-slot" bis_skin_checked="1"><div class="v-verticallayout v-layout v-vertical v-widget" bis_skin_checked="1"></div></div></div></div><div class="v-panel-deco v-panel-deco-light" style="margin-bottom: 0px;" bis_skin_checked="1"></div></div></div></div>
+
+	
+
+<script src="./bom_files/jquery.qtip.min.js.transferir"></script>
+<script src="./bom_files/toastr.min.js.transferir"></script>
+<script src="./bom_files/html2canvas.js.transferir"></script>
+<script src="./bom_files/jquery-ui.js.transferir"></script>
+<script type="text/javascript" src="./bom_files/qubEduFeedbackCollectorV3.js.transferir"></script>
+
+<link rel="stylesheet" type="text/css" href="./bom_files/jquery.qtip.min.css">
+<link rel="stylesheet" type="text/css" href="./bom_files/qubEduFeedbackCollector.scss">
+<link rel="stylesheet" type="text/css" href="./bom_files/toastr.min.css">
+<link rel="stylesheet" href="./bom_files/font-awesome.min.css">
+
+
+
+<script type="text/javascript">
+	toastr.options = {
+		  "closeButton": false,
+		  "debug": false,
+		  "newestOnTop": false,
+		  "progressBar": false,
+		  "positionClass": "toast-top-center",
+		  "preventDuplicates": true,
+		  "onclick": null,
+		  "showDuration": "1",
+		  "hideDuration": "1000",
+		  "timeOut": "10000",
+		  "extendedTimeOut": "1000",
+		  "showEasing": "swing",
+		  "hideEasing": "linear",
+		  "showMethod": "fadeIn",
+		  "hideMethod": "fadeOut"
+	} 
+		var readLabels = {helpMessage:"Queremos ajudar! Nas situações de erro indique como o podemos replicar e qual o resultado esperado. Pode também adicionar ficheiros ou contextualizar informação em partes do ecrã.",type:"Tipo",title:"Formulário de Suporte",urgency:"Urgência",subject:"Assunto",message:"Mensagem",messagePlaceholder:"Descreva aqui os detalhes do seu problema.",add:"Adicionar",screenCaptureHelpMessage:"Seleccione uma área do ecrã que quer marcar para a referir na descrição do seu problema.",annexHelpMessage:"Adicione um ficheiro que nos ajude a depurar o seu problema.",send:"Enviar",cancel:"Cancelar",captureInfo:"Seleccione a área que deseja anotar (Pressione ESC para cancelar).",successMessage:"Pedido submetido com sucesso!",errorMessage:"Pedido não enviado, tente novamente.",validationMessage:"A sua mensagem não tem texto.",tipLabel:"Anotação",annexSizeError:"O tamanho dos ficheiros deve ser inferior a 2MB"};
+	
+	$( document ).ready(function() {
+		new window.qubSupportFormHandler("#openHelpdesk", "/api/defaultSupportRequest", readLabels,"body",false  ,"/static/qubSupport.html").init([{value : 'QUESTION', text : 'Dúvida' },{value : 'REQUEST', text : 'Pedido' },{value : 'ERROR', text : 'Erro' }], [{value : 'CRITICAL', text : 'Crítica' },{value : 'HIGH', text : 'Alta' },{value : 'MEDIUM', text : 'Média' },{value : 'LOW', text : 'Baixa' }], 2535718626787353);
+	});
+	</script>                			</div>
+		</main>
+				<div class="col-sm-2 col-sm-pull-10 panel-group" id="accordion" bis_skin_checked="1">
+												 <div class="panel panel-default" bis_skin_checked="1">
+									<div class="panel-heading" bis_skin_checked="1">
+                        <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="https://fenix.ciencias.ulisboa.pt/student#collapse2535435158945801">Consultar</a>
+                        </h4>
+                    </div>
+										<div id="collapse2535435158945801" class="panel-collapse collapse in" bis_skin_checked="1">
+											<div class="panel-body" style="margin-bottom:-0px;" bis_skin_checked="1">
+							<table class="table">
+																					<tbody><tr class="danger">
+							                                    <td>
+                                        <span class="glyphicon glyphicon-th text-primary"></span> <a href="https://fenix.ciencias.ulisboa.pt/student/consult/com.qubit.solution.fenixedu.module.elearning.presentation.screens.student.StudentCoursesDashboard">Disciplinas Frequentadas</a>
+                                    </td>
+                                </tr>
+																					<tr>
+							                                    <td>
+                                        <span class="glyphicon glyphicon-th text-primary"></span> <a href="https://fenix.ciencias.ulisboa.pt/student/consult/com.qubit.qubEdu.module.administrativeOffice.presentation.screens.student.studentCurricularPlan.ViewStudentCurricularPlan">Currículo</a>
+                                    </td>
+                                </tr>
+																					<tr>
+							                                    <td>
+                                        <span class="glyphicon glyphicon-th text-primary"></span> <a href="https://fenix.ciencias.ulisboa.pt/student/consult/academictreasury-customer-viewaccount">Visualizar Conta</a>
+                                    </td>
+                                </tr>
+																					<tr>
+							                                    <td>
+                                        <span class="glyphicon glyphicon-th text-primary"></span> <a href="https://fenix.ciencias.ulisboa.pt/student/consult/com.qubit.qubEdu.module.administrativeOffice.presentation.screens.student.studentStatute.ViewStudentStatutes">Estatutos</a>
+                                    </td>
+                                </tr>
+																					<tr>
+							                                    <td>
+                                        <span class="glyphicon glyphicon-th text-primary"></span> <a href="https://fenix.ciencias.ulisboa.pt/student/consult/com.qubit.qubEdu.module.academicWork.presentation.uiLayer.flows.academicWorkManagement.SearchAcademicWorkForStudent">Trabalhos Académicos</a>
+                                    </td>
+                                </tr>
+													</tbody></table>
+                        </div>
+                    </div>
+							</div>
+					 <div class="panel panel-default" bis_skin_checked="1">
+									<div class="panel-heading" bis_skin_checked="1">
+                        <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="https://fenix.ciencias.ulisboa.pt/student#collapse2535435158945802">Inscrever</a>
+                        </h4>
+                    </div>
+																<div id="collapse2535435158945802" class="panel-collapse collapse " bis_skin_checked="1">
+																	<div class="panel-body" style="margin-bottom:-0px;" bis_skin_checked="1">
+							<table class="table">
+																					<tbody><tr>
+							                                    <td>
+                                        <span class="glyphicon glyphicon-th text-primary"></span> <a href="https://fenix.ciencias.ulisboa.pt/student/enrol/com.qubit.qubEdu.module.administrativeOffice.presentation.screens.enrolments.enrolmentProcess.execution.EnrolmentProcessesExecutionEntryPoint">Processos de Inscrição</a>
+                                    </td>
+                                </tr>
+																					<tr>
+							                                    <td>
+                                        <span class="glyphicon glyphicon-th text-primary"></span> <a href="https://fenix.ciencias.ulisboa.pt/student/enrol/com.qubit.qubEdu.module.evaluations.presentation.uiLayer.student.EvaluationsOverviewUI">Avaliações / Exames</a>
+                                    </td>
+                                </tr>
+													</tbody></table>
+                        </div>
+                    </div>
+							</div>
+					 <div class="panel panel-default" bis_skin_checked="1">
+									<div class="panel-heading" bis_skin_checked="1">
+                        <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="https://fenix.ciencias.ulisboa.pt/student#collapse2535435158945803">Pedidos Académicos (antigos)</a>
+                        </h4>
+                    </div>
+																<div id="collapse2535435158945803" class="panel-collapse collapse " bis_skin_checked="1">
+																	<div class="panel-body" style="margin-bottom:-0px;" bis_skin_checked="1">
+							<table class="table">
+																					<tbody><tr>
+							                                    <td>
+                                        <span class="glyphicon glyphicon-th text-primary"></span> <a href="https://fenix.ciencias.ulisboa.pt/student/academic-services/ulisboaspecifications-student-ulisboaservicerequest">Os meus pedidos</a>
+                                    </td>
+                                </tr>
+													</tbody></table>
+                        </div>
+                    </div>
+							</div>
+					 <div class="panel panel-default" bis_skin_checked="1">
+									<div class="panel-heading" bis_skin_checked="1">
+                        <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="https://fenix.ciencias.ulisboa.pt/student#collapse2535435158945804">Outros Serviços</a>
+                        </h4>
+                    </div>
+																<div id="collapse2535435158945804" class="panel-collapse collapse " bis_skin_checked="1">
+																	<div class="panel-body" style="margin-bottom:-0px;" bis_skin_checked="1">
+							<table class="table">
+																					<tbody><tr>
+							                                    <td>
+                                        <span class="glyphicon glyphicon-th text-primary"></span> <a href="https://fenix.ciencias.ulisboa.pt/student/school-services/com.qubit.solution.fenixedu.module.customersfcul.presentation.uilayer.pedidosCreditacao.FormCreditacao.CreateFormCreditacao">Pedidos de Creditação</a>
+                                    </td>
+                                </tr>
+																					<tr>
+							                                    <td>
+                                        <span class="glyphicon glyphicon-th text-primary"></span> <a href="https://fenix.ciencias.ulisboa.pt/student/school-services/com.qubit.solution.fenixedu.module.customersfcul.presentation.uilayer.classificacoesIntercalares.ClassificationElement.SearchStudentClassifications">Divulgação de Resultados</a>
+                                    </td>
+                                </tr>
+													</tbody></table>
+                        </div>
+                    </div>
+							</div>
+				</div>
+					</div>
+				<footer class="clearfix" role="contentinfo">
+				<div class="col-sm-2 text-center" bis_skin_checked="1">
+					<a class="brand" href="http://www.ulisboa.pt/"><img src="./bom_files/ul-banner.png" alt="FenixEdu at fc-theme"></a>
+				</div>
+				<p class="col-sm-5">
+											<span>
+							<a id="openHelpdesk" href="javascript:">Apoio Fenix (Formulário)</a>
+						</span>
+
+													<a href="https://fenix.ciencias.ulisboa.pt/support">
+								Área de Suporte Fenix							</a>
+												
+									</p>
+				<div class="col-sm-2 text-center" bis_skin_checked="1">
+					<img src="./bom_files/sama-bw.png" alt="FenixEdu at fc-theme">
+				</div>
+		</footer>
+		<div class="modal fade" id="helpdeskModal" bis_skin_checked="1"></div>
+		
+		
+		<script>
+      $("#openHelpdesk").on("click", function(){
+        openHelpdesk();
+        return false;
+      });
+         
+			openHelpdesk = function() {
+				$('#helpdeskModal').load('/themes/fc-theme/helpdeskReport.jsp');
+				$('#helpdeskModal').modal({
+					backdrop: 'static',
+					keyboard: false
+				});
+				window.current$functionality = '2535718626787353';
+			};
+					
+		</script>
+		
+			
+
+	<script>
+
+	$(document).ready(function() {
+
+	});
+</script>
+
+
+
+<div class="qubSupport" bis_skin_checked="1"><form class="padding-20 helpdesk-border-color" style="display: none;">
+	<div bis_skin_checked="1">
+		<h1>Formulário de Suporte</h1>
+	</div>
+	<div class="card bg-info padding-10" bis_skin_checked="1">Queremos ajudar! Nas situações de erro indique como o podemos replicar e qual o resultado esperado. Pode também adicionar ficheiros ou contextualizar informação em partes do ecrã.</div>
+	<div class="row" bis_skin_checked="1">
+		<div class="col-md-12" bis_skin_checked="1">
+			<div class="form-group" bis_skin_checked="1">
+				<label for="select-support-type">Tipo</label> <select name="select-support-type" id="select-support-type" class="type dropdown form-control">
+				<option value="QUESTION">Dúvida</option><option value="REQUEST">Pedido</option><option value="ERROR">Erro</option></select>
+			</div>
+		</div>
+	</div>
+	<div class="row" bis_skin_checked="1">
+		<div class="col-md-12" bis_skin_checked="1">
+			<div class="form-group" bis_skin_checked="1">
+				<label for="select-support-urgency">Urgência</label> <select name="select-support-urgency" id="select-support-urgency" class="urgency dropdown form-control">
+				<option value="CRITICAL">Crítica</option><option value="HIGH">Alta</option><option value="MEDIUM">Média</option><option value="LOW">Baixa</option></select>
+			</div>
+		</div>
+	</div>
+	<div class="row" bis_skin_checked="1">
+		<div class="col-md-12" bis_skin_checked="1">
+			<div class="form-group" bis_skin_checked="1">
+				<label>Assunto</label> <input type="text" placeholder="" class="subject form-control">
+			</div>
+		</div>
+	</div>
+	<div class="row" bis_skin_checked="1">
+		<div class="col-md-12" bis_skin_checked="1">
+			<div class="form-group" bis_skin_checked="1">
+				<label for="textarea">Mensagem</label>
+				<textarea name="textarea" class="message form-control" placeholder="Descreva aqui os detalhes do seu problema."></textarea>
+			</div>
+		</div>
+	</div>
+	<div class="row" bis_skin_checked="1">
+		<div class="col-md-12" bis_skin_checked="1">
+			Adicionar
+			<i class="captureScreen text-primary fa fa-crosshairs" title="Seleccione uma área do ecrã que quer marcar para a referir na descrição do seu problema." style="cursor: pointer; font-size: 20px; margin-left: 10px"></i>
+			<i class="addAnnex text-primary fa fa-paperclip" title="Adicione um ficheiro que nos ajude a depurar o seu problema." style="cursor: pointer; font-size: 20px; margin-left: 10px"></i>
+			<ul class="files-list">
+			</ul>
+		</div>
+	</div>
+
+	<div class="row" bis_skin_checked="1">
+		<div class="col-md-12" bis_skin_checked="1">
+			<div class="text-left pdd-vertical-25" bis_skin_checked="1">
+				<input class="upload-element" type="file" style="display: none">
+				<button type="button" class="btn btn-primary send">Enviar</button>
+				<button type="button" class="btn btn-default cancel">Cancelar</button>
+			</div>
+		</div>
+	</div>
+</form></div><iframe id="com.qubit.solution.vaadin.framework.widgets.UILayerWidgetset" tabindex="-1" style="position: absolute; width: 0px; height: 0px; border: none; left: -1000px; top: -1000px;" src="./bom_files/saved_resource(1).html"></iframe><div id="uiLayer-overlays" class="v-app  quik-vaadin v-overlay-container" aria-live="assertive" aria-label="This content is announced automatically and does not need to be navigated into." aria-relevant="additions" bis_skin_checked="1"><div class="v-tooltip" role="tooltip" aria-live="assertive" aria-relevant="additions" style="margin-left: 0px; margin-top: 0px; left: -5000px; top: -5000px; z-index: 20001; visibility: visible; position: absolute; overflow: visible;" bis_skin_checked="1"><div class="popupContent" bis_skin_checked="1"><div bis_skin_checked="1"><div class="v-errormessage" aria-hidden="true" style="display: none;" bis_skin_checked="1"><div class="gwt-HTML" bis_skin_checked="1"> </div></div><div class="v-tooltip-text" bis_skin_checked="1" style="display: none;"></div></div></div></div></div></body></html>
